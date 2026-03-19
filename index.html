@@ -7,39 +7,49 @@
   <title>Portfolio Website</title>
   <link rel="stylesheet" href="styles.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
-
+  <div id="progress-bar"></div>
   <nav>
-    <a href="#" class="logo"><span>Anto Jovita</span></a>
-    <ul class="links">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </ul>
-    <a href="#contact" class="btn">Contact Me</a>
+    <div class="nav-container">
+
+      <a href="#" class="logo"><span>Anto Jovita</span></a>
+
+      <ul class="links">
+        <a href="#home"><span>Home</span></a>
+        <a href="#about"><span>About</span></a>
+        <a href="#projects"><span>Projects</span></a>
+        <a href="#contact"><span>Contact</span></a>
+      </ul>
+
+      <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
   </nav>
 
   <section id="home">
     <img src="temprofile.jpg" alt="Profile Image">
     <div class="info-box">
       <h1><span>Hello, I'm Jovita</span></h1>
-      <h3><span>AI Enthusiast | UI/UX Designer | Creative Thinker</span></h3>
-      <p>A final year B.Tech Artificial Intelligence and Data Science student passionate about blending creativity with
-        technology. I specialize in UI/UX design and love bringing ideas to life through intelligent and elegant digital
-        experiences. Let's build something impactful together!</p>
+
+      <p style="margin-top:10px; font-weight:500; opacity:0.8;">
+        Open to Internships | Available for Work
+      </p>
+
+      <h3 id="typing-text"></h3>
+      <p>I build real-world web applications with clean UI, smart features, and AI integration.
+        Focused on solving meaningful problems through technology.</p>
     </div>
     <div class="btn-box">
       <a href="#projects" class="btn">View My Work</a>
-      <a href="#contact" class="btn">Get In Touch</a>
+      <a href="Resume.pdf" class="btn">View Resume</a>
     </div>
 
   </section>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <div class="about-box">
       <div class="about-info">
 
@@ -54,46 +64,62 @@
 
         <h3><span>Education</span></h3>
         <div class="education">
-          <p>B.Tech - Artificial Intelligence and Data Science<br>DMI College of Engineering<br>Expected Graduation:
+          <p>B.Tech - Artificial Intelligence and Data Science<br>DMI College of Engineering<br>CGPA: 9.2 /
+            10<br>Expected Graduation:
             2026</p>
         </div>
 
-        <h3><span>Skills</span></h3>
         <div class="skills">
-          <ul>
-            <li>
-              <h3><span><i class='bx bx-chevron-right'></i> Python</span></h3>
-            </li>
-            <li>
-              <h3><span><i class='bx bx-chevron-right'></i> HTML</span></h3>
-            </li>
-            <li>
-              <h3><span><i class='bx bx-chevron-right'></i> UI/UX Design (Figma, Canva)</span></h3>
-            </li>
-            <li>
-              <h3><span><i class='bx bx-chevron-right'></i> Prompt Engineering</span></h3>
-            </li>
-          </ul>
-        </div>
 
+          <h3 class="header"><span>Skills</span></h3>
+
+          <div class="skills-container">
+
+            <div class="skill-box">
+              <h3>Frontend</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </div>
+
+            <div class="skill-box">
+              <h3>Backend</h3>
+              <ul>
+                <li>Node.js</li>
+                <li>Express.js</li>
+              </ul>
+            </div>
+
+            <div class="skill-box">
+              <h3>AI / ML</h3>
+              <ul>
+                <li>Python</li>
+                <li>Deep Learning</li>
+                <li>CNN, RNN</li>
+              </ul>
+            </div>
+
+            <div class="skill-box">
+              <h3>Tools</h3>
+              <ul>
+                <li>Git & GitHub</li>
+                <li>Figma</li>
+                <li>Canva</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
         <h3><span>Internships & Achievements</span></h3>
-        <div class="internships - achievements">
-          <ul>
-            <li>
-              <h3><i class='bx bx-certification'></i> Web Development Intern - Codebind Technologies</h3>
-            </li>
-            <li>
-              <h3><i class='bx bx-certification'></i> Data Analytics Intern - NoviTech R&D Pvt. Ltd</h3>
-            </li>
-            <li>
-              <h3><i class='bx bx-medal'></i> Top 5 Finalist - All India Women-Only Hackathon</h3>
-            </li>
-            <li>
-              <h3><i class='bx bx-medal'></i> Published a research paper on AI-Driven Personalized Fashion</h3>
-            </li>
-            <li>
-              <h3><i class='bx bx-medal'></i> 2nd Prize - Figma Design Competition</h3>
-            </li>
+        <div class="internships-achievements">
+          <ul class="internship-list">
+            <li><strong>Web Development Intern </strong>- Codebind Technologies</li>
+            <li><strong>Data Analytics Intern </strong>- NoviTech R&D Pvt. Ltd</li>
+            <li><strong>Top 5 Finalist </strong>- All India Women-Only Hackathon</li>
+            <li><strong>Published a research paper </strong>on AI-Driven Personalized Fashion</li>
+            <li><strong>2nd Prize </strong>- Figma Design Competition</li>
           </ul>
         </div>
 
@@ -116,62 +142,122 @@
     <div class="projects-wrapper">
 
       <!-- Project 1 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <h3 class="project-title">Emotion-Based Facial Recognition</h3>
-        <p class="project-description">An innovative system that detects emotions through facial expressions, enhancing
-          user interaction in applications.</p>
-        <p class="project-description">Uses CNN + RNN to detect emotional states and assist in personalized healthcare.
+
+        <p class="project-description">
+          An AI system that detects human emotions from facial expressions to enhance user interaction and support
+          personalized applications.
         </p>
-        <a class="project-link" href="https://github.com/Jovita15-anto/Emotion-based-Face-recognition.git"
-          target="_blank">View on GitHub</a>
+
+        <p><strong>Tech:</strong> Python, CNN, RNN, OpenCV</p>
+
+        <p>✔ Detects emotional states in real-time</p>
+        <p>✔ Can be used in healthcare & smart systems</p>
         <img class="project-image" src="template2.jpg" alt="Emotion-based facial recognition project image">
+        <div class="btn-box" data-aos="fade-up">
+          <a class="btn" href="https://github.com/Jovita15-anto/Emotion-based-Face-recognition.git"
+            target="_blank">GitHub</a>
+        </div>
       </div>
 
       <!-- Project 2 -->
-      <div class="project-card">
-        <h3 class="project-title">AI Driven Personalized Fashion <em>(Ongoing)</em></h3>
-        <p class="project-description">The platform enhances shopping personalization, reduces textile waste, and
-          promotes ethical fashion practices.</p>
-        <p class="project-description">It employs deep learning models, such as CNNs, GANs, and NLP.</p>
-        <img class="project-image" src="template3.jpg" alt="AI personalized fashion project image">
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-card">
+      <div class="project-card" data-aos="zoom-in">
         <h3 class="project-title">KuralKodu <em>(Ongoing)</em></h3>
-        <p class="project-description">Civic tech project to address social issues via AI-powered routing to responsive
-          government departments, including image upload and complaint tracking.</p>
-        <p class="project-description">Utilizes AI to analyze images and route complaints effectively.</p>
+
+        <p class="project-description">
+          A civic-tech web application that allows users to report issues with images and automatically routes
+          complaints to the correct authorities.
+        </p>
+
+        <p><strong>Tech:</strong> Node.js, Express, MongoDB, HTML, CSS, JavaScript</p>
+
+        <p>✔ Full-stack application with real-world impact</p>
+        <p>✔ Image upload and complaint tracking system</p>
         <img class="project-image" src="template4.jpg" alt="KuralKodu civic tech project image">
+        <div class="btn-box" data-aos="fade-up"></div>
+        <a class="btn" href="https://github.com/Jovita15-anto/KuralKodu" target="_blank">GitHub</a>
       </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card" data-aos="zoom-in">
+      <h3 class="project-title">AI Driven Personalized Fashion <em>(Ongoing)</em></h3>
+
+      <p class="project-description">
+        A smart fashion platform that personalizes clothing recommendations and promotes sustainable fashion using AI.
+      </p>
+
+      <p><strong>Tech:</strong> CNN, GAN, NLP, Deep Learning</p>
+
+      <p>✔ Reduces textile waste through smart recommendations</p>
+      <p>✔ Enhances user shopping experience</p>
+
+      <img class="project-image" src="template3.jpg" alt="AI personalized fashion project image">
+    </div>
 
     </div>
   </section>
 
   <section id="contact">
-    <div class="contact-box">
-      <div class="contact-info">
-        <h1 class="header"><span>Contact</span></h1>
 
-        <form action="#">
+    <h1 class="header">Let's Work Together</h1>
+
+    <div class="contact-box">
+
+      <!-- LEFT -->
+      <div class="contact-left">
+
+        <p class="contact-tagline">
+          Frontend Developer & AI Enthusiast
+          building real-world applications with clean UI and smart features.
+        </p>
+
+        <ul class="contact-points">
+          <li>✔ Available for internships / full-time roles</li>
+          <li>✔ Open to collaboration on real-world projects</li>
+        </ul>
+
+        <div class="btn-box">
+          <a href="Resume.pdf" class="btn">View Resume</a>
+        </div>
+
+        <div class="contact-info">
+          <p><strong>Email:</strong><span> kavijami86@gmail.com</span></p>
+          <p><strong>GitHub:</strong>
+            <a href="https://github.com/Jovita15-anto" target="_blank">github.com/Jovita15-anto</a>
+          </p>
+          <p><strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/anto-jovita-7b5427283" target="_blank">linkedin.com/in/anto-jovita</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT -->
+      <div class="contact-right">
+        <form>
           <div class="input-box">
             <span>Full Name</span>
             <input type="text" placeholder="Enter your Full Name">
           </div>
 
           <div class="input-box">
-            <span>Your Email</span>
-            <input type="text" placeholder="Enter your Email">
+            <span>Email</span>
+            <input type="email" placeholder="Enter your Email">
           </div>
 
           <div class="input-box">
-            <span>Your Message</span>
-            <input type="text" placeholder="Enter your Message">
+            <span>Message</span>
+            <textarea placeholder="Enter your Message"></textarea>
           </div>
 
-          <button type="submit" class="btn">Submit</button>
-
+          <button type="submit" class="btn">Send Message</button>
         </form>
+      </div>
+
+    </div>
+
   </section>
 
   <footer>
@@ -184,20 +270,9 @@
 
       <div class="col-box">
         <span><i class='bx bx-envelope'></i></span>
-        <span>jantojovita2005@gmail.com</span>
+        <span>kavijami86@gmail.com</span>
       </div>
-
-      <div class="share-container">
-        <span class="share-trigger" onclick="toggleShareMenu()">
-          <i class='bx bx-share'></i> Share
-        </span>
-
-        <div class="share-menu" id="shareMenu">
-          <a href="https://wa.me/?text=https://jovita15-anto.github.io/My-Portfolio-Website/" target="_blank">Share on
-            WhatsApp</a>
-          <a href="#" onclick="copyLink(); return false;">Copy Link</a>
-        </div>
-      </div>
+    </div>
     </div>
 
     <div class="col-right">
@@ -227,7 +302,7 @@
     }
 
     function copyLink() {
-      navigator.clipboard.writeText(" https://jovita15-anto.github.io/portfolio/");
+      navigator.clipboard.writeText("https://jovita15-anto.github.io/portfolio/");
       alert("Portfolio link copied to clipboard!");
     }
 
@@ -237,6 +312,66 @@
       if (!trigger.contains(event.target) && !menu.contains(event.target)) {
         menu.style.display = "none";
       }
+    });
+
+    window.onscroll = function () {
+      let scrollTop = document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (scrollTop / height) * 100;
+      document.getElementById("progress-bar").style.width = scrolled + "%";
+    };
+
+
+    const roles = [
+      "Aspiring Software Developer ",
+      "Frontend Developer ",
+      "UI/UX Designer ",
+      "AI Enthusiast ",
+      "Building Real-World Applications ",
+      "Passionate Learner ",
+      "Creative Problem-Solver "
+    ];
+
+    let i = 0;
+    let j = 0;
+    let currentText = "";
+    let isDeleting = false;
+
+    function typeEffect() {
+      const element = document.getElementById("typing-text");
+
+      if (i < roles.length) {
+        if (!isDeleting && j <= roles[i].length) {
+          currentText = roles[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          currentText = roles[i].substring(0, j--);
+        }
+
+        element.innerHTML = currentText + '<span class="cursor">|</span>';
+
+        if (j === roles[i].length) {
+          isDeleting = true;
+          setTimeout(typeEffect, 1000);
+          return;
+        }
+
+        if (j === 0 && isDeleting) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+        }
+      }
+
+      setTimeout(typeEffect, isDeleting ? 40 : 80);
+    }
+
+    typeEffect();
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
     });
   </script>
 </body>
